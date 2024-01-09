@@ -1,0 +1,50 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset204 Calibri;}{\f1\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\fi-1260\li3600\sa200\sl276\slmult1\f0\fs36\lang1026\'ef\'e0\'f0\'e0\'eb\'e5\'eb\'e5\'ed bfs \'ed\'e0 \f1\lang1033 python\f0\fs22\lang1026\par
+
+\pard\sa200\sl276\slmult1\par
+\'d1\'ea\'f0\'e8\'ef\'f2\'fa\'f2 \'f0\'e5\'e0\'eb\'e8\'e7\'e8\'f0\'e0 \'e0\'f0\'f5\'e8\'f2\'e5\'ea\'f2\'f3\'f0\'e0 \'f1\'fa\'f0\'e2\'fa\'f0-\'ea\'eb\'e8\'e5\'ed\'f2, \'e8\'e7\'ef\'ee\'eb\'e7\'e2\'e0\'e9\'ea\'e8 \'f1\'ee\'ea\'e5\'f2\'e8 \'e7\'e0 \'ee\'e1\'f0\'e0\'e1\'ee\'f2\'ea\'e0 \'ed\'e0 \'ec\'ed\'ee\'e6\'e5\'f1\'f2\'e2\'ee \'ed\'e8\'f8\'ea\'e8 \'f1 \'f6\'e5\'eb \'e8\'e7\'e2\'fa\'f0\'f8\'e2\'e0\'ed\'e5 \'ed\'e0 \'ee\'e1\'f5\'ee\'e6\'e4\'e0\'ed\'e5 \'ed\'e0 \'e3\'f0\'e0\'f4\'e8 \'ef\'ee \'e0\'eb\'e3\'ee\'f0\'e8\'f2\'fa\'ec \'e7\'e0 \'ee\'e1\'f5\'ee\'e6\'e4\'e0\'ed\'e5 \'e2 \'f8\'e8\'f0\'e8\'ed\'e0 (BFS). \'d1\'fa\'f0\'e2\'fa\'f0\'fa\'f2 \'ef\'f0\'e8\'e5\'ec\'e0 \'ee\'f2 \'ea\'eb\'e8\'e5\'ed\'f2\'e0 \'ee\'ef\'f0\'e5\'e4\'e5\'eb\'e5\'ed \'e1\'f0\'ee\'e9 \'ed\'e8\'f8\'ea\'e8 \'e8 \'e3\'f0\'e0\'f4 \'e2\'fa\'e2 \'f4\'ee\'f0\'ec\'e0\'f2 \'ed\'e0 \'f0\'e5\'f7\'ed\'e8\'ea, \'f1\'eb\'e5\'e4 \'ea\'ee\'e5\'f2\'ee \'e8\'e7\'ef\'ee\'eb\'e7\'e2\'e0 \'ec\'ed\'ee\'e3\'ee\'ed\'e8\'f8\'ea\'ee\'e2\'ee\'f1\'f2\'f2\'e0 \'e7\'e0 \'e8\'e7\'e2\'fa\'f0\'f8\'e2\'e0\'ed\'e5 \'ed\'e0 BFS \'e2\'fa\'f0\'f5\'f3 \'f1\'e5\'ea\'f6\'e8\'e8 \'ee\'f2 \'e3\'f0\'e0\'f4\'e0 \'e5\'e4\'ed\'ee\'e2\'f0\'e5\'ec\'e5\'ed\'ed\'ee.\par
+\par
+\'c8\'e7\'ef\'ee\'eb\'e7\'e2\'e0\'ed\'e8 \'e1\'e8\'e1\'eb\'e8\'ee\'f2\'e5\'ea\'e8:\par
+\tab socket: \'cf\'ee\'e7\'e2\'ee\'eb\'ff\'e2\'e0 \'ea\'ee\'ec\'f3\'ed\'e8\'ea\'e0\'f6\'e8\'ff \'ec\'e5\'e6\'e4\'f3 \'f1\'fa\'f0\'e2\'fa\'f0\'e0 \'e8 \'ec\'ed\'ee\'e6\'e5\'f1\'f2\'e2\'ee \'ea\'eb\'e8\'e5\'ed\'f2\'e8.\par
+\tab ast: \'cf\'f0\'e5\'e4\'ee\'f1\'f2\'e0\'e2\'ff \'f4\'f3\'ed\'ea\'f6\'e8\'e8 \'e7\'e0 \'e1\'e5\'e7\'ee\'ef\'e0\'f1\'ed\'ee \'ee\'f6\'e5\'ed\'ff\'e2\'e0\'ed\'e5 \'ed\'e0 \'f1\'f2\'f0\'e8\'ed\'e3\'ee\'e2\'e5 \'f1 Python \'f1\'f2\'ee\'e9\'ed\'ee\'f1\'f2\'e8.\par
+\tab threading: \'d3\'eb\'e5\'f1\'ed\'ff\'e2\'e0 \'f1\'fa\'e7\'e4\'e0\'e2\'e0\'ed\'e5\'f2\'ee \'e8 \'f3\'ef\'f0\'e0\'e2\'eb\'e5\'ed\'e8\'e5\'f2\'ee \'ed\'e0 \'ed\'e8\'f8\'ea\'e8.\par
+
+\pard\li720\sa200\sl276\slmult1 queue: \'d0\'e5\'e0\'eb\'e8\'e7\'e8\'f0\'e0 \'ee\'ef\'e0\'f8\'ea\'e0, \'e8\'e7\'ef\'ee\'eb\'e7\'e2\'e0\'ed\'e0 \'e7\'e0 \'ea\'ee\'ec\'f3\'ed\'e8\'ea\'e0\'f6\'e8\'ff \'ec\'e5\'e6\'e4\'f3 \'ed\'e8\'f8\'ea\'e8.\par
+
+\pard\sa200\sl276\slmult1\tab time: \'cf\'ee\'ec\'e0\'e3\'e0 \'e7\'e0 \'e8\'e7\'ec\'e5\'f0\'e2\'e0\'ed\'e5 \'ed\'e0 \'e2\'f0\'e5\'ec\'e5\'f2\'ee \'e7\'e0 \'e8\'e7\'ef\'fa\'eb\'ed\'e5\'ed\'e8\'e5.\par
+\'d4\'f3\'ed\'ea\'f6\'e8\'e8:\par
+\tab bfs(graph, start_node, result_queue): \'c8\'e7\'e2\'fa\'f0\'f8\'e2\'e0 \'ee\'e1\'f5\'ee\'e6\'e4\'e0\'ed\'e5 \'e2 \'f8\'e8\'f0\'e8\'ed\'e0 \'ed\'e0 \'e4\'e0\'e4\'e5\'ed \'e3\'f0\'e0\'f4, \tab\'e7\'e0\'ef\'ee\'f7\'e2\'e0\'e9\'ea\'e8 \'ee\'f2 \'ea\'ee\'ed\'ea\'f0\'e5\'f2\'e5\'ed \'e2\'f0\'fa\'f5. \'d0\'e5\'e7\'f3\'eb\'f2\'e0\'f2\'e8\'f2\'e5 \'ee\'f2 \'ee\'e1\'f5\'ee\'e6\'e4\'e0\'ed\'e5\'f2\'ee \'f1\'e5 \'ef\'ee\'f1\'f2\'e0\'e2\'ff\'f2 \'e2 \'ee\'ef\'e0\'f8\'ea\'e0.\par
+\tab handle_client(client_socket): \'d3\'ef\'f0\'e0\'e2\'eb\'ff\'e2\'e0 \'e2\'f0\'fa\'e7\'ea\'e0\'f2\'e0 \'ed\'e0 \'ea\'eb\'e8\'e5\'ed\'f2\'e0, \'ef\'ee\'eb\'f3\'f7\'e0\'e2\'e0 \'e2\'f5\'ee\'e4\'ed\'e8 \'e4\'e0\'ed\'ed\'e8 \tab (\'e1\'f0\'ee\'e9 \'ed\'e8\'f8\'ea\'e8 \'e8 \'e3\'f0\'e0\'f4), \'e8 \'e7\'e0\'ef\'ee\'f7\'e2\'e0 \'ec\'ed\'ee\'e3\'ee\'ed\'e8\'f8\'ea\'ee\'e2\'ee \'ee\'e1\'f5\'ee\'e6\'e4\'e0\'ed\'e5 \'ed\'e0 \'e3\'f0\'e0\'f4\'e0.\par
+\'d0\'e0\'e1\'ee\'f2\'e5\'ed \'ef\'f0\'ee\'f6\'e5\'f1:\par
+\tab\'c8\'ed\'e8\'f6\'e8\'e0\'eb\'e8\'e7\'e0\'f6\'e8\'ff \'ed\'e0 \'f1\'fa\'f0\'e2\'fa\'f0\'e0:\par
+\tab\'d1\'fa\'f0\'e2\'fa\'f0\'fa\'f2 \'f1\'eb\'f3\'f8\'e0 \'e7\'e0 \'e2\'f5\'ee\'e4\'ff\'f9\'e8 \'e2\'f0\'fa\'e7\'ea\'e8 \'ed\'e0 \'ee\'ef\'f0\'e5\'e4\'e5\'eb\'e5\'ed IP \'e0\'e4\'f0\'e5\'f1 (host) \'e8 \'ef\'ee\'f0\'f2 (port).\par
+\tab\'ce\'e1\'f0\'e0\'e1\'ee\'f2\'ea\'e0 \'ed\'e0 \'e2\'f0\'fa\'e7\'ea\'e8\'f2\'e5 \'f1 \'ea\'eb\'e8\'e5\'ed\'f2\'e8:\par
+\tab\'cf\'f0\'e8 \'e2\'f0\'fa\'e7\'ea\'e0 \'f1 \'ea\'eb\'e8\'e5\'ed\'f2, \'f1\'e5 \'e8\'e7\'e2\'e8\'ea\'e2\'e0 \'f4\'f3\'ed\'ea\'f6\'e8\'ff\'f2\'e0 handle_client \'e2 \'ee\'f2\'e4\'e5\'eb\'ed\'e0 \'ed\'e8\'f8\'ea\'e0, \'e7\'e0 \'e4\'e0 \tab\'f3\'ef\'f0\'e0\'e2\'eb\'ff\'e2\'e0 \'e7\'e0\'ff\'e2\'ea\'e8\'f2\'e5 \'ed\'e0 \'ea\'eb\'e8\'e5\'ed\'f2\'e0.\par
+\tab\'ce\'e1\'f0\'e0\'e1\'ee\'f2\'ea\'e0 \'ed\'e0 \'e7\'e0\'ff\'e2\'ea\'e8\'f2\'e5 \'ed\'e0 \'ea\'eb\'e8\'e5\'ed\'f2\'e8\'f2\'e5:\par
+\par
+\tab\'d1\'fa\'f0\'e2\'fa\'f0\'fa\'f2 \'ef\'ee\'eb\'f3\'f7\'e0\'e2\'e0 \'e1\'f0\'ee\'ff \'ed\'e0 \'ed\'e8\'f8\'ea\'e8\'f2\'e5 \'e8 \'e4\'e0\'ed\'ed\'e8\'f2\'e5 \'e7\'e0 \'e3\'f0\'e0\'f4\'e0 \'ee\'f2 \'ea\'eb\'e8\'e5\'ed\'f2\'e0.\par
+
+\pard\li720\sa200\sl276\slmult1\'c8\'e7\'e2\'fa\'f0\'f8\'e2\'e0 \'ef\'e0\'f0\'f1\'e2\'e0\'ed\'e5 \'ed\'e0 \'ef\'ee\'eb\'f3\'f7\'e5\'ed\'e8\'f2\'e5 \'e4\'e0\'ed\'ed\'e8 - \'e2 \'f6\'e5\'eb\'ee\'f7\'e8\'f1\'eb\'e5\'ed \'e2\'e8\'e4 (\'e1\'f0\'ee\'e9 \'ed\'e8\'f8\'ea\'e8) \'e8 \'f0\'e5\'f7\'ed\'e8\'ea \'e7\'e0 \'e3\'f0\'e0\'f4\'e0.\par
+
+\pard\sa200\sl276\slmult1\tab\'cc\'ed\'ee\'e3\'ee\'ed\'e8\'f8\'ea\'ee\'e2\'ee \'e8\'e7\'ef\'fa\'eb\'ed\'e5\'ed\'e8\'e5 \'ed\'e0 BFS:\par
+
+\pard\li720\sa200\sl276\slmult1\'d1\'fa\'f0\'e2\'fa\'f0\'fa\'f2 \'f1\'fa\'e7\'e4\'e0\'e2\'e0 \'ed\'e8\'f8\'ea\'e8 \'e2 \'e7\'e0\'e2\'e8\'f1\'e8\'ec\'ee\'f1\'f2 \'ee\'f2 \'ef\'ee\'eb\'f3\'f7\'e5\'ed\'e8\'ff \'e1\'f0\'ee\'e9 \'ee\'f2 \'ea\'eb\'e8\'e5\'ed\'f2\'e0.\par
+\'c2\'f1\'ff\'ea\'e0 \'ed\'e8\'f8\'ea\'e0 \'e8\'e7\'ef\'fa\'eb\'ed\'ff\'e2\'e0 BFS \'e2\'fa\'f0\'f5\'f3 \'f7\'e0\'f1\'f2 \'ee\'f2 \'e3\'f0\'e0\'f4\'e0 \'e8 \'e7\'e0\'ef\'e8\'f1\'e2\'e0 \'f0\'e5\'e7\'f3\'eb\'f2\'e0\'f2\'e8\'f2\'e5 \'e2 \'f1\'ef\'ee\'e4\'e5\'eb\'e5\'ed\'e0 \'ee\'ef\'e0\'f8\'ea\'e0 (result_queue).\par
+\'cd\'e8\'f8\'ea\'e8\'f2\'e5 \'f1\'e5 \'f1\'e8\'ed\'f5\'f0\'ee\'ed\'e8\'e7\'e8\'f0\'e0\'f2 \'f7\'f0\'e5\'e7 thread.join(), \'e7\'e0 \'e4\'e0 \'e7\'e0\'e2\'fa\'f0\'f8\'e0\'f2 \'e8\'e7\'ef\'fa\'eb\'ed\'e5\'ed\'e8\'e5\'f2\'ee \'f1\'e8.\par
+\'c8\'e7\'f7\'e8\'f1\'eb\'ff\'e2\'e0\'ed\'e5 \'ed\'e0 \'e2\'f0\'e5\'ec\'e5\'f2\'ee \'e7\'e0 \'e8\'e7\'ef\'fa\'eb\'ed\'e5\'ed\'e8\'e5:\par
+
+\pard\sa200\sl276\slmult1\tab\'d1\'ea\'f0\'e8\'ef\'f2\'fa\'f2 \'e8\'e7\'f7\'e8\'f1\'eb\'ff\'e2\'e0 \'e2\'f0\'e5\'ec\'e5\'f2\'ee \'e7\'e0 \'e8\'e7\'ef\'fa\'eb\'ed\'e5\'ed\'e8\'e5 \'ed\'e0 \'ee\'e1\'f5\'ee\'e6\'e4\'e0\'ed\'e5\'f2\'ee \'e2 \'f8\'e8\'f0\'e8\'ed\'e0 \'f1 \'ec\'ed\'ee\'e6\'e5\'f1\'f2\'e2\'ee \tab\'ed\'e8\'f8\'ea\'e8.\par
+\tab\'d0\'e5\'e7\'f3\'eb\'f2\'e0\'f2\'e8\'f2\'e5 \'ee\'f2 BFS \'e2 \'ee\'ef\'e0\'f8\'ea\'e0\'f2\'e0 \'f1\'e5 \'ee\'f2\'ef\'e5\'f7\'e0\'f2\'e2\'e0\'f2.\par
+\par
+\'ce\'e1\'f0\'e0\'e1\'ee\'f2\'ea\'e0 \'ed\'e0 \'e3\'f0\'e5\'f8\'ea\'e8:\par
+\tab\'d1\'ea\'f0\'e8\'ef\'f2\'fa\'f2 \'e2\'ea\'eb\'fe\'f7\'e2\'e0 \'ee\'e1\'f0\'e0\'e1\'ee\'f2\'ea\'e0 \'ed\'e0 \'e3\'f0\'e5\'f8\'ea\'e8 \'ef\'f0\'e8 \'ef\'ee\'eb\'f3\'f7\'e0\'e2\'e0\'ed\'e5 \'ed\'e0 \'ed\'e5\'e2\'e0\'eb\'e8\'e4\'ed\'e8 \'e4\'e0\'ed\'ed\'e8 \'ee\'f2 \f1\lang1033\tab\f0\lang1026\'ea\'eb\'e8\'e5\'ed\'f2\'e0.\par
+\par
+\'c8\'e7\'ef\'ee\'eb\'e7\'e2\'e0\'ed\'e5:\par
+\f1\lang1033\tab\f0\lang1026\'d1\'f2\'e0\'f0\'f2\'e8\'f0\'e0\'e9\'f2\'e5 \'f1\'ea\'f0\'e8\'ef\'f2\'e0 \'ed\'e0 \'f1\'fa\'f0\'e2\'fa\'f0\'e0.\par
+
+\pard\li720\sa200\sl276\slmult1\'c8\'e7\'ef\'ee\'eb\'e7\'e2\'e0\'e9\'f2\'e5 \'ef\'f0\'e5\'e4\'ee\'f1\'f2\'e0\'e2\'e5\'ed\'e8\'ff\'f2 \'f1\'ea\'f0\'e8\'ef\'f2 \'ed\'e0 \'ea\'eb\'e8\'e5\'ed\'f2\'e0, \'e7\'e0 \'e4\'e0 \'f1\'e5 \'f1\'e2\'fa\'f0\'e6\'e5\'f2\'e5  \'f1\'fa\'f1 \'f1\'fa\'f0\'e2\'fa\'f0\'e0 \'e8 \'e2\'fa\'e2\'e5\'e4\'e5\'f2\'e5 \'e1\'f0\'ee\'ff \'ed\'e0 \'ed\'e8\'f8\'ea\'e8\'f2\'e5 \'e8 \'e4\'e0\'ed\'ed\'e8\'f2\'e5 \'e7\'e0 \'e3\'f0\'e0\'f4\'e0.\par
+\par
+\f1\lang1033\tab\tab\tab\tab\tab\f0\fs28\lang1026\'cd\'e8\'ea\'ee\'eb\'e0\'e9 \'c3\'e5\'ee\'f0\'e3\'e8\'e5\'e2 2\f1\lang1033 MI0800042\lang9\par
+}
+ 
